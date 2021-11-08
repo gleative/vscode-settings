@@ -1,0 +1,98 @@
+// Place your key bindings in this file to override the defaults
+[
+  // VIM - Allows TAB to work in VISUAL MODE and NORMAL MODE | This is nice if you dont like TAB to navigate open files
+  // {
+  //   "key": "tab",
+  //   "command": "tab",
+  //   "when": "editorTextFocus && !editorTabMovesFocus"
+  // },
+  // {
+  //   "key": "shift+tab",
+  //   "command": "outdent",
+  //   "when": "editorTextFoxus && !editorTabMovesFocus"
+  // },
+  // Navigate in intellisense with j and k
+  {
+    "key": "cmd+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // Navigate in cmd+shift+p and cmd+p windows with j and k
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  // When editor is split, move focus to LEFT
+  {
+    "key": "cmd+h",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  // When editor is split, move focus to RIGHT
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  // Toggles sidebar. SPACE, e. (Space is my vim.leader, if you have different leader add that letter before 'e')
+  {
+    "key": " e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible"
+    // "when": "!editorTextFocus"
+  },
+  // Create new file when focus is on explorer
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  // Rename file in selected in explorer
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  // Open file
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  // Simulate hover
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover"
+  },
+  {
+    "key": "space",
+    "command": "-breadcrumbs.revealFocused",
+    "when": "breadcrumbsActive && breadcrumbsVisible"
+  },
+  {
+    "key": "space",
+    "command": "-filesExplorer.openFilePreserveFocus",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+  }
+]

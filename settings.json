@@ -1,0 +1,115 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#4dffea"
+  },
+  // Prettier
+  // Set the default
+  // "editor.formatOnSave": true,
+  "explorer.confirmDragAndDrop": false,
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  // Gjør at du ez kan skrive html tags i
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.tabSize": 2,
+  "editor.codeLens": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Dracula.min",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../dist/css"
+    }
+  ],
+  "prettier.printWidth": 120,
+  "javascript.format.enable": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.fontSize": 12.5,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "Jetbrains Mono, Monaco, 'Courier New', monospace",
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // Disable minimap
+  "editor.minimap.enabled": false,
+
+  "vim.leader": "<space>",
+  "vim.visualModeKeyBindings": [
+    // VIM - Hvis du har satt visual OG indenter, så er det fortsatt VISUAL
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // Navigate between open files in editor
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Split editor (horizontal)
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleSidebarVisibility && workbench.action.focusSideBar"]
+    },
+    // Rename current file you are on (REQ: File Utils extension)
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": ["fileutils.renameFile"]
+    },
+    // Move cursor to first letter in line (CMD+LEFT | 0w)
+    {
+      "before": ["<leader>", "h"],
+      "after": ["_"]
+    },
+    // Move cursor to last letter in line (CMD+RIGHT | SHIFT+$)
+    {
+      "before": ["<leader>", "l"],
+      "after": ["$"]
+    },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"]
+    }
+  ],
+  "workbench.activityBar.visible": false
+
+  // TODO:
+  // Legg til shortcut til GIT (leader, g ???)
+  // Legg til shortcut til extensions????
+}
