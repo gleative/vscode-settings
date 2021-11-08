@@ -46,13 +46,13 @@
     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
   // Toggles sidebar. SPACE, e. (Space is my vim.leader, if you have different leader add that letter before 'e')
-  // ! NOTE: If <space> is your leader, then you cant INSERT <space> when the explorer is visible
-  {
-    "key": "space e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "explorerViewletVisible"
-    // "when": "!editorTextFocus"
-  },
+  // // ! NOTE: If <space> is your leader, then you cant INSERT <space> when the explorer is visible
+  // {
+  //   "key": "space e",
+  //   "command": "workbench.action.toggleSidebarVisibility",
+  //   "when": "explorerViewletVisible"
+  //   // "when": "!editorTextFocus"
+  // },
   // Create new file when focus is on explorer
   {
     "key": "a",
