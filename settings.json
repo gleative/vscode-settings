@@ -45,7 +45,10 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // Disable minimap
   "editor.minimap.enabled": false,
+  "workbench.activityBar.visible": false,
 
+  // VIM
+  "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
   "vim.visualModeKeyBindings": [
     // VIM - Hvis du har satt visual OG indenter, så er det fortsatt VISUAL
@@ -106,8 +109,7 @@
       "before": ["<leader>", "a"],
       "commands": ["workbench.action.toggleActivityBarVisibility"]
     }
-  ],
-  "workbench.activityBar.visible": false
+  ]
 
   // TODO:
   // Legg til shortcut til GIT (leader, g ???)
