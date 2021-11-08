@@ -45,7 +45,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   // Disable minimap
   "editor.minimap.enabled": false,
-  "workbench.activityBar.visible": false,
+  "explorer.compactFolders": false,
 
   // VIM
   "vim.useSystemClipboard": true,
@@ -109,7 +109,8 @@
       "before": ["<leader>", "a"],
       "commands": ["workbench.action.toggleActivityBarVisibility"]
     }
-  ]
+  ],
+  "workbench.activityBar.visible": false
 
   // TODO:
   // Legg til shortcut til GIT (leader, g ???)
