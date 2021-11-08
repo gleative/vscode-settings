@@ -46,6 +46,7 @@
     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
   // Toggles sidebar. SPACE, e. (Space is my vim.leader, if you have different leader add that letter before 'e')
+  // ! NOTE: If <space> is your leader, then you cant INSERT <space> when the explorer is visible
   {
     "key": "space e",
     "command": "workbench.action.toggleSidebarVisibility",
@@ -56,18 +57,18 @@
   {
     "key": "a",
     "command": "explorer.newFile",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !inputFocus"
   },
   {
     "key": "shift+a",
     "command": "explorer.newFolder",
-    "when": "explorerViewletFocus"
+    "when": "explorerViewletFocus && !inputFocus"
   },
   // Rename file in selected in explorer
   {
     "key": "r",
     "command": "renameFile",
-    "when": "explorerViewletVisible && filesExplorerFocus"
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
   {
     "key": "enter",
@@ -82,17 +83,8 @@
   },
   // Simulate hover
   {
-    "key": "ctrl+k",
-    "command": "editor.action.showHover"
-  },
-  {
-    "key": "space",
-    "command": "-breadcrumbs.revealFocused",
-    "when": "breadcrumbsActive && breadcrumbsVisible"
-  },
-  {
-    "key": "space",
-    "command": "-filesExplorer.openFilePreserveFocus",
-    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
   }
 ]
