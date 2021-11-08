@@ -82,7 +82,7 @@
   },
   // Simulate hover
   {
-    "key": "shift+k",
+    "key": "ctrl+k",
     "command": "editor.action.showHover"
   },
   {
