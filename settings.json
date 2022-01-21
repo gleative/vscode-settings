@@ -9,14 +9,15 @@
   // "editor.formatOnSave": true,
   "explorer.confirmDragAndDrop": false,
   "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
-  // Gjør at du ez kan skrive html tags i
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
+
+  // Emmet config - VIS emmet intellisense på bunnen!!
+  // "emmet.showSuggestionsAsSnippets": true,
+  // "editor.snippetSuggestions": "bottom",
+
   "editor.tabSize": 2,
   "editor.codeLens": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Dracula.min",
+  "workbench.colorTheme": "Dracula",
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
@@ -79,6 +80,10 @@
       "commands": ["workbench.action.splitEditor"]
     },
     {
+      "before": ["<leader>", "d"],
+      "commands": ["workbench.action.splitEditorDown"]
+    },
+    {
       "before": ["<leader>", "e"],
       "commands": ["revealInExplorer"]
     },
@@ -109,6 +114,17 @@
       "before": ["<leader>", "a"],
       "commands": ["workbench.action.toggleActivityBarVisibility"]
     }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    }
+  ],
+  "tabnine.experimentalAutoImports": true,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "react"
   ],
   "workbench.activityBar.visible": false
 
