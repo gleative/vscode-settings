@@ -131,4 +131,29 @@
   // TODO:
   // Legg til shortcut til GIT (leader, g ???)
   // Legg til shortcut til extensions????
+
+
+  // "workbench.statusBar.visible": true
+  // "editor.hideCursorInOverviewRuler": true
+
+  // Edit title bar (apc.electron Apc Customize UI extension needed)
+  "window.titleBarStyle": "native",
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 11,
+      "y": 10
+    }
+  },
+  "apc.header": {
+    "height": 36
+  },
+
+  // Remove unnecessary controls from primary bar and tabs list
+  "apc.stylesheet": {
+    ".title-label > h2": "display: none", // Remove primary side bar title
+    ".title-actions": "display: none", // Remove primary side bar action icons
+    ".editor-actions": "display: none", // Remove editor action icons
+    ".nosidebar .inline-tabs-placeholder": "width: 75px" // Align tabs to not overlap window controls when primary bar is hidden
+  }
 }
