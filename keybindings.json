@@ -86,5 +86,63 @@
     "key": "shift+k",
     "command": "editor.action.showHover",
     "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "-workbench.action.terminal.findPrevious",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+
+  // Igor Babko keyboard shorcuts --------------------------
+  // /  Hide toasts when visible when pressing escape
+  {
+    "key": "escape",
+    "command": "notifications.hideToasts",
+    "when": "notificationToastsVisible"
+  },
+
+  // / File explorer
+  //  -- Collapse all folders in side bar
+  {
+    "key": "cmd+\\",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+
+  // Open file explorer
+  {
+    "key": "cmd+e",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+
+  // Split to right side
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.splitEditor"
   }
 ]
