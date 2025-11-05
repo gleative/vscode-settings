@@ -1,27 +1,16 @@
 {
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#4dffea"
-  },
   // Prettier
   // Set the default
   // "editor.formatOnSave": true,
-  "explorer.confirmDragAndDrop": false,
   "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
-
   // Emmet config - VIS emmet intellisense på bunnen!!
   // "emmet.showSuggestionsAsSnippets": true,
   // "editor.snippetSuggestions": "bottom",
-
-  "editor.tabSize": 2,
-  "editor.codeLens": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Dracula",
+  "workbench.colorTheme": "Aura Dracula Spirit (Synthwave)",
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.singleQuote": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "liveServer.settings.donotShowInfoMsg": true,
   "liveSassCompile.settings.formats": [
     {
@@ -33,10 +22,8 @@
   "prettier.printWidth": 120,
   "javascript.format.enable": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.fontSize": 12.5,
   "editor.formatOnSave": true,
-  "editor.fontFamily": "Jetbrains Mono, Monaco, 'Courier New', monospace",
-  "editor.cursorStyle": "line",
+  "editor.fontFamily": "Jetbrains Mono",
   "editor.lineNumbers": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
@@ -44,10 +31,6 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  // Disable minimap
-  "editor.minimap.enabled": false,
-  "explorer.compactFolders": false,
-
   // VIM
   "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
@@ -122,38 +105,120 @@
     }
   ],
   "tabnine.experimentalAutoImports": true,
-  "emmet.excludeLanguages": [
-    "markdown",
-    "react"
-  ],
-  "workbench.activityBar.visible": false
-
+  "emmet.excludeLanguages": ["markdown", "react"],
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.env.osx": {},
+  "editor.inlineSuggest.enabled": true,
+  "task.allowAutomaticTasks": "on",
   // TODO:
   // Legg til shortcut til GIT (leader, g ???)
   // Legg til shortcut til extensions????
 
+  // New after tise update code formatting config
+  "prettier.configPath": ".prettierrc",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnPaste": true,
+  "eslint.lintTask.enable": true,
+  "extensions.ignoreRecommendations": true,
+  "svg.preview.mode": "svg",
+  // "workbench.editor.showTabs": "single"
+  // Hides statusbar which is at the bottom
+  "workbench.statusBar.visible": false,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  // Disable minimap
+  "editor.minimap.enabled": false,
+  // "breadcrumbs.enabled": false,
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.hidesExplorerArrows": true,
+  // "workbench.tree.enableStickyScroll": false
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 8,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.decorations.badges": false,
 
-  // "workbench.statusBar.visible": true
-  // "editor.hideCursorInOverviewRuler": true
-
-  // Edit title bar (apc.electron Apc Customize UI extension needed)
+  // Hide top bar (basic style)
+  "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
-  "apc.electron": {
+  // * Custom ui style (extenstion to hide top bar fully) -> NEEDED extension FOR CUSTOM UI STYLE
+  "custom-ui-style.electron": {
     "titleBarStyle": "hiddenInset",
     "trafficLightPosition": {
-      "x": 11,
-      "y": 10
+      "x": 20,
+      "y": 11
     }
   },
-  "apc.header": {
-    "height": 36
-  },
+  "custom-ui-style.stylesheet": {
+    ".notification-toast": "box-shadow: none !important",
+    ".quick-input-widget.show-file-icons": "box-shadow: none !important",
+    // Moves {CMD+SHIFT+P} and {CMD+P} to ish middle of screen
+    ".quick-input-widget": "top: 25vh !important",
+    ".monaco-action-bar.quick-input-inline-action-bar": "display: none",
+    ".editor-widget.find-widget": "box-shadow: none; border-radius: 4px",
+    ".quick-input-titlebar": "background: #100B15 !important",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title.title-border-bottom:after": "display: none",
+    ".monaco-scrollable-element > .shadow.top": "display: none",
+    ".sidebar .title-label": "padding: 0 !important",
+    ".sidebar": "border: none !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important",
+    ".monaco-list-row.focused": "outline: none !important",
+    ".monaco-editor .scroll-decoration": "display: none",
+    ".title-actions": "display: none !important",
+    ".title.show-file-icons .label-container .monaco-icon-label.file-icon": "justify-content: center; padding: 0 !important",
+    ".title .monaco-icon-label:after": "margin-right: 0",
+    ".monaco-workbench .part.editor > .content .editor-group-container > .title > .label-container > .title-label": "padding-left: 60px",
+    // Centers the file name in the tab (aka gives more space.. dont want this, but can make abit space if you want)
+    // ".title .monaco-icon-label.file-icon": "margin: 0 60px",
 
-  // Remove unnecessary controls from primary bar and tabs list
-  "apc.stylesheet": {
-    ".title-label > h2": "display: none", // Remove primary side bar title
-    ".title-actions": "display: none", // Remove primary side bar action icons
-    ".editor-actions": "display: none", // Remove editor action icons
-    ".nosidebar .inline-tabs-placeholder": "width: 75px" // Align tabs to not overlap window controls when primary bar is hidden
-  }
+    // Cursor if you want to change it. Can consider gradient for the one I already have on top
+    // ".monaco-editor .cursors-layer .cursor": "background-image: linear-gradient(135deg, #ffaffc 10%, #da70d6 100%)",
+
+    // Push tabs to the right so dont overlap with traffic lights
+    // - Makes sure padding-left is only applied to the LEFT EDITOR if SPLIT so padding dont apply to right editor
+    ".monaco-workbench .part.editor > .content .monaco-scrollable-element .split-view-container > div:first-child .tabs-and-actions-container": "padding-left: 100px"
+    // ".tabs-and-actions-container": "padding-left: 100px" // THIS ONE WORKS IF ONLY EDITOR NOT SPLIT
+  },
+  "custom-ui-style.font.sansSerif": "Jetbrains Mono", // Changes font style of side bar and tabs bar
+  // Stops cursor from blinking
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
+  // Dont show what function you are in
+  "editor.stickyScroll.enabled": false,
+  "editor.codeLens": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.tabSize": 2,
+  // Hides folding controls for functions etc (use shortcut instead)
+  // "editor.showFoldingControls": "never",
+  // Hides indendetion lines e,g you see line below if
+  "editor.guides.indentation": false,
+  // Hides the line you are highligted on
+  // "editor.renderLineHighlight": "none"
+  "editor.scrollbar.horizontal": "hidden",
+  // "editor.scrollbar.vertical": "hidden",
+  // TODO: Shortcut to find error in file
+  // "editor.overviewRulerBorder": false
+  // "editor.hideCursorInOverviewRuler": true
+  "extenstions.ignoreRecommendations": true,
+
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#4dffea",
+    // We define what colors we wish customly dependent on the theme we use
+    "[Better Selenized Dark]": {
+      "sideBar.background": "#143139"
+    },
+    "[Aura Dracula Spirit (Soft)]": {
+      "sideBar.background": "#181520"
+    }
+  },
+  "workbench.editor.autoLockGroups": {
+    "vscode.audioPreview": true
+  },
+  "editor.fontSize": 13,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.inlineSuggest.edits.allowCodeShifting": "never",
+  "workbench.activityBar.location": "hidden"
 }
